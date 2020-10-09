@@ -7,5 +7,25 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Soldier AOC
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: a9b8beaa7564b43adbb6764eed8c6719, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 6720303635017113406, guid: b969b339c50364209b613134a796ae2c,
+      type: 3}
+    m_OverrideClip: {fileID: 6720303635017113406, guid: 999ed87d289ec40ea8fff2d8355c475c,
+      type: 3}
+  - m_OriginalClip: {fileID: -4630339522487117836, guid: b969b339c50364209b613134a796ae2c,
+      type: 3}
+    m_OverrideClip: {fileID: -4630339522487117836, guid: 999ed87d289ec40ea8fff2d8355c475c,
+      type: 3}
+  - m_OriginalClip: {fileID: 8017390324079358001, guid: b969b339c50364209b613134a796ae2c,
+      type: 3}
+    m_OverrideClip: {fileID: 8017390324079358001, guid: 999ed87d289ec40ea8fff2d8355c475c,
+      type: 3}
+  - m_OriginalClip: {fileID: -3100369314251171874, guid: b969b339c50364209b613134a796ae2c,
+      type: 3}
+    m_OverrideClip: {fileID: -3100369314251171874, guid: 999ed87d289ec40ea8fff2d8355c475c,
+      type: 3}
+  - m_OriginalClip: {fileID: 2667949614841947897, guid: b969b339c50364209b613134a796ae2c,
+      type: 3}
+    m_OverrideClip: {fileID: 2667949614841947897, guid: 999ed87d289ec40ea8fff2d8355c475c,
+      type: 3}
