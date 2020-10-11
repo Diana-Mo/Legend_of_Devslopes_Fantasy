@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Assertions;
 
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(NavMeshAgent))]
+
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField]

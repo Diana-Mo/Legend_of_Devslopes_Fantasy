@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     [SerializeField]
-    GameObject player;
+    private GameObject player;
     private bool gameOver = false;
 
     public bool GameOver
@@ -26,13 +26,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    static public GameManager Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+
     private void Awake()
     {
         if (instance == null)
+        {
             instance = this;
-        else if (instance != this)
-            Destroy(gameObject);
-
+        }
+        //else if (instance != this)
+        //{
+        //    Destroy(gameObject);
+        //}
         DontDestroyOnLoad(gameObject);
     }
 
