@@ -26,57 +26,63 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //direction that we want to go by getting input from the axis
-        Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        //moved the character with speed
-        characterController.SimpleMove(moveDirection * moveSpeed);
+        if (!GameManager.Instance.GameOver)
+        {
+            //direction that we want to go by getting input from the axis
+            Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            //
+            //moved the character with speed
+            characterController.SimpleMove(moveDirection * moveSpeed);
 
-        //check if we're moving or not
-        if (moveDirection == Vector3.zero)
-        {
-            anim.SetBool("IsWalking", false);
-        }
-        else
-        {
-            anim.SetBool("IsWalking", true);
-        }
+            //check if we're moving or not
+            if (moveDirection == Vector3.zero)
+            {
+                anim.SetBool("IsWalking", false);
+            }
+            else
+            {
+                anim.SetBool("IsWalking", true);
+            }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            anim.Play("DoubleChop");
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            anim.Play("SpinAttack");
+            if (Input.GetMouseButtonDown(0))
+            {
+                anim.Play("DoubleChop");
+            }
+            if (Input.GetMouseButtonDown(1))
+            {
+                anim.Play("SpinAttack");
+            }
         }
     }
 
     //update for physics update, raycast is a physics object
     void FixedUpdate()
     {
-        //create a hit point variable, where the raycast is actually hitting the layer mask
-        RaycastHit hit;
-        //creating a ray from the camera to the mouse position
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        //visualize the raycast
-        Debug.DrawRay(ray.origin, ray.direction * 500, Color.blue);
-
-        //don't set any of the other collision triggers off
-        //sets up the raycast, pass in the ray we created, out is to use it, layermask we're looking to intersect with, ignore any other trigger interactions
-        if (Physics.Raycast(ray, out hit, 500, layerMask, QueryTriggerInteraction.Ignore))
+        if (!GameManager.Instance.GameOver)
         {
-            if (hit.point != currentLookTarget)
+            //create a hit point variable, where the raycast is actually hitting the layer mask
+            RaycastHit hit;
+            //creating a ray from the camera to the mouse position
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            //visualize the raycast
+            Debug.DrawRay(ray.origin, ray.direction * 500, Color.blue);
+
+            //don't set any of the other collision triggers off
+            //sets up the raycast, pass in the ray we created, out is to use it, layermask we're looking to intersect with, ignore any other trigger interactions
+            if (Physics.Raycast(ray, out hit, 500, layerMask, QueryTriggerInteraction.Ignore))
             {
-                //set it to hit point if we're not already looking in that direction
-                currentLookTarget = hit.point;
+                if (hit.point != currentLookTarget)
+                {
+                    //set it to hit point if we're not already looking in that direction
+                    currentLookTarget = hit.point;
+                }
+
+                //perform the rotation here
+                Vector3 targetPosition = new Vector3(hit.point.x, transform.position.y, hit.point.z);
+                Quaternion rotation = Quaternion.LookRotation(targetPosition - transform.position);
+                transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * 10f);
             }
-
-            //perform the rotation here
-            Vector3 targetPosition = new Vector3(hit.point.x, transform.position.y, hit.point.z);
-            Quaternion rotation = Quaternion.LookRotation(targetPosition - transform.position);
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * 10f);
-
         }
     }
 }

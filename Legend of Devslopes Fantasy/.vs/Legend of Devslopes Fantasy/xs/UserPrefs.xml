@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{D63EDFFE-B426-09CA-3687-0E0B3839E9A2}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/PlayerHealth.cs">
     <Files>
-      <File FileName="Assets/scripts/PlayerController.cs" Line="16" Column="23" />
+      <File FileName="Assets/scripts/PlayerController.cs" Line="14" Column="1" />
       <File FileName="Assets/scripts/CameraFollow.cs" />
       <File FileName="Assets/scripts/EnemyMove.cs" />
-      <File FileName="Assets/scripts/GameManager.cs" Line="34" Column="10" />
-      <File FileName="Assets/scripts/EnemyAttack.cs" Line="53" Column="6" />
+      <File FileName="Assets/scripts/GameManager.cs" />
+      <File FileName="Assets/scripts/EnemyAttack.cs" />
+      <File FileName="Assets/scripts/PlayerHealth.cs" Line="31" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +14,7 @@
           <Node name="Legend of Devslopes Fantasy" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="scripts" expanded="True">
-                <Node name="GameManager.cs" selected="True" />
+                <Node name="PlayerHealth.cs" selected="True" />
               </Node>
             </Node>
           </Node>
