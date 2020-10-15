@@ -174,7 +174,7 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.7833333
-        functionName: EnemyEndAttck
+        functionName: EnemyEndAttack
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
