@@ -6,6 +6,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(AudioSource))]
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
     //play death nimation
     private Animator anim;
     private int currentHealth;
+    private AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
         anim = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         currentHealth = startingHealth;
+        audio = GetComponent<AudioSource> ();
 
     }
 
@@ -62,6 +65,7 @@ public class PlayerHealth : MonoBehaviour
             GameManager.Instance.PlayerHit(currentHealth);
             anim.Play("Hurt");
             currentHealth -= 10;
+            audio.PlayOneShot(audio.clip);
         }
 
         if (currentHealth <= 0)
@@ -72,9 +76,9 @@ public class PlayerHealth : MonoBehaviour
 
     void killPlayer()
     {
-        //
         GameManager.Instance.PlayerHit(currentHealth);
         anim.SetTrigger("HeroDie");
         characterController.enabled = false;
+        audio.PlayOneShot(audio.clip);
     }
 }

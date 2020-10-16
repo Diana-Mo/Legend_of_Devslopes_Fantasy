@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(BoxCollider))]
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,12 +16,14 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     private Vector3 currentLookTarget = Vector3.zero; // don't know where to be looking on startup
     private Animator anim;
+    private BoxCollider[] swordColliders;
 
     // Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        swordColliders = GetComponentsInChildren<BoxCollider>();
     }
 
     // Update is called once per frame
