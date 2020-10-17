@@ -88,4 +88,20 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    public void BeginAttack()
+    {
+        foreach (var weapon in swordColliders)
+        {
+            weapon.enabled = true;
+        }
+    }
+
+    public void EndAttack()
+    {
+        foreach (var weapon in swordColliders)
+        {
+            weapon.enabled = false;
+        }
+    }
 }

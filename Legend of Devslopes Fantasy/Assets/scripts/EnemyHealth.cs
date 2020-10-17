@@ -95,6 +95,7 @@ public class EnemyHealth : MonoBehaviour
         anim.SetTrigger("EnemyDie");
         rigidBody.isKinematic = true;
 
+        StartCoroutine(removeEnemy());
     }
 
     IEnumerator removeEnemy()

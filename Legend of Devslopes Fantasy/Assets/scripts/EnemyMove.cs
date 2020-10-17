@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Assertions;
 
+[RequireComponent(typeof(EnemyHealth))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(NavMeshAgent))]
 
@@ -13,6 +14,7 @@ public class EnemyMove : MonoBehaviour
     Transform player;
     private NavMeshAgent nav;
     private Animator anim;
+    private EnemyHealth enemyHealth;
 
     private void Awake()
     {
@@ -22,6 +24,7 @@ public class EnemyMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent<Animator>();
         nav = GetComponent<NavMeshAgent>();
     }
@@ -29,9 +32,14 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.Instance.GameOver)
+        if (!GameManager.Instance.GameOver && enemyHealth.IsALive)
         {
+
             nav.SetDestination(player.position);
+        }
+        else if ((!GameManager.Instance.GameOver || GameManager.Instance.GameOver) && !enemyHealth.IsALive)
+        {
+            nav.enabled = false;
         }
         else
         {
