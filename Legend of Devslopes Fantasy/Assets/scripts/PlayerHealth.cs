@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Assertions;
 
 //check when the collider of enemies's weapons hits the player (check for trigger events)
 
@@ -14,6 +16,8 @@ public class PlayerHealth : MonoBehaviour
     int startingHealth = 100;
     [SerializeField]
     float timeSinceLastHit = 2f;
+    [SerializeField]
+    Slider healthSlider;
 
     //keep trck of time between hits
     private float timer = 0f;
@@ -23,6 +27,11 @@ public class PlayerHealth : MonoBehaviour
     private Animator anim;
     private int currentHealth;
     private AudioSource audio;
+
+    private void Awake()
+    {
+        Assert.IsNotNull(healthSlider);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +74,7 @@ public class PlayerHealth : MonoBehaviour
             GameManager.Instance.PlayerHit(currentHealth);
             anim.Play("Hurt");
             currentHealth -= 10;
+            healthSlider.value = currentHealth;
             audio.PlayOneShot(audio.clip);
         }
 
