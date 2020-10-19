@@ -1,21 +1,23 @@
-﻿<Properties StartupConfiguration="{D63EDFFE-B426-09CA-3687-0E0B3839E9A2}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/EnemyHealth.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/PlayerController.cs">
     <Files>
-      <File FileName="Assets/scripts/PlayerController.cs" Line="11" Column="37" />
+      <File FileName="Assets/scripts/PlayerController.cs" Line="71" Column="31" />
       <File FileName="Assets/scripts/CameraFollow.cs" />
-      <File FileName="Assets/scripts/EnemyMove.cs" Line="40" Column="10" />
+      <File FileName="Assets/scripts/EnemyMove.cs" />
       <File FileName="Assets/scripts/GameManager.cs" />
-      <File FileName="Assets/scripts/EnemyAttack.cs" Line="68" Column="48" />
-      <File FileName="Assets/scripts/PlayerHealth.cs" Line="78" Column="6" />
-      <File FileName="Assets/scripts/EnemyHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/EnemyAttack.cs" />
+      <File FileName="Assets/scripts/PlayerHealth.cs" />
+      <File FileName="Assets/scripts/EnemyHealth.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Legend of Devslopes Fantasy" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="scripts" expanded="True">
-                <Node name="EnemyHealth.cs" selected="True" />
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="scripts" expanded="True">
+                  <Node name="PlayerController.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -25,7 +27,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="67ed0c94-f48c-444b-8c36-8a28172ec4d2" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="895a4fca-dd94-40a2-87ab-06a00cae5e06" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
