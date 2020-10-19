@@ -8,6 +8,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(ParticleSystem))]
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class EnemyHealth : MonoBehaviour
     private bool isAlive;
     private bool dissapearEnemy = false;
     private int currentHealth;
+    private ParticleSystem blood;
 
     public bool IsALive
     {
@@ -47,6 +49,7 @@ public class EnemyHealth : MonoBehaviour
         audio = GetComponent<AudioSource>();
         isAlive = true;
         currentHealth = startingHealth;
+        blood = GetComponentInChildren<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -67,6 +70,7 @@ public class EnemyHealth : MonoBehaviour
             if (other.tag == "PlayerWeapon")
             {
                 takeHit();
+                blood.Play();
                 timer = 0f;
             }
         }   
