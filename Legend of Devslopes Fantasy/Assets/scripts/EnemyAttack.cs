@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(EnemyHealth))]
 [RequireComponent(typeof(BoxCollider))]
 [RequireComponent(typeof(Animator))]
-
 public class EnemyAttack : MonoBehaviour
 {
     [SerializeField]
@@ -31,14 +31,8 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) < range && enemyHealth.IsALive)
-        {
-            playerInRange = true;
-        }
-        else
-        {
-            playerInRange = false;
-        }
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        playerInRange = distanceToPlayer < range && enemyHealth.IsALive;
         //print(playerInRange);
     }
 

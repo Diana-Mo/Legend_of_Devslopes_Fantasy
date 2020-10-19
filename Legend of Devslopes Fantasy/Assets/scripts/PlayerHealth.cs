@@ -10,7 +10,6 @@ using UnityEngine.Assertions;
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(ParticleSystem))]
-
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]

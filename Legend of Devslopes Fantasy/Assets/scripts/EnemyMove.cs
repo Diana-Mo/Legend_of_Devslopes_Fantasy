@@ -7,7 +7,6 @@ using UnityEngine.Assertions;
 [RequireComponent(typeof(EnemyHealth))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(NavMeshAgent))]
-
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField]

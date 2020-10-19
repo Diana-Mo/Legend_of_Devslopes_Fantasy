@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(BoxCollider))]
-
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]

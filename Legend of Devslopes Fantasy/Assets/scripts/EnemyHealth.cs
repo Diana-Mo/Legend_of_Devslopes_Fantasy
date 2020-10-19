@@ -9,7 +9,6 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(ParticleSystem))]
-
 public class EnemyHealth : MonoBehaviour
 {
 
@@ -60,19 +59,20 @@ public class EnemyHealth : MonoBehaviour
         {
             transform.Translate(-Vector3.up * dissapearSpeed * Time.deltaTime);
         }
-
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (timer >= timeSinceLastHit && !GameManager.Instance.GameOver)
         {
-            if (other.tag == "PlayerWeapon")
+            if (other.tag != "PlayerWeapon")
             {
-                takeHit();
-                blood.Play();
-                timer = 0f;
+                return;
             }
+
+            takeHit();
+            blood.Play();
+            timer = 0f;
         }   
     }
 
@@ -84,8 +84,8 @@ public class EnemyHealth : MonoBehaviour
             anim.Play("hurt");
             currentHealth -= 10;
         }
-
-        if (currentHealth <= 0)
+        else
+        //if (currentHealth <= 0)
         {
             isAlive = false;
             KillEnemy();
