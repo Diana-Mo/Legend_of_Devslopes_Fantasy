@@ -9,20 +9,15 @@ using UnityEngine.Assertions;
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyMove : MonoBehaviour
 {
-    [SerializeField]
-    Transform player;
+    private Transform player;
     private NavMeshAgent nav;
     private Animator anim;
     private EnemyHealth enemyHealth;
 
-    private void Awake()
-    {
-        Assert.IsNotNull(player);
-    }
-
     // Start is called before the first frame update
     void Start()
     {
+        player = GameManager.Instance.Player.transform;
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent<Animator>();
         nav = GetComponent<NavMeshAgent>();

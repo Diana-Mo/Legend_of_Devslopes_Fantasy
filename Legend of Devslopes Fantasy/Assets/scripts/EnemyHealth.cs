@@ -41,6 +41,8 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //adds a spawned enemy to the enemies list
+        GameManager.Instance.RegisterEnemy(this);
         rigidBody = GetComponent<Rigidbody>();
         capsuleCollider = GetComponent<CapsuleCollider>();
         nav = GetComponent<NavMeshAgent>();
@@ -94,6 +96,8 @@ public class EnemyHealth : MonoBehaviour
 
     void KillEnemy()
     {
+        //adds a killed eney to the killedEnemies list
+        GameManager.Instance.KilledEnemy(this);
         capsuleCollider.enabled = false;
         nav.enabled = false;
         anim.SetTrigger("EnemyDie");
