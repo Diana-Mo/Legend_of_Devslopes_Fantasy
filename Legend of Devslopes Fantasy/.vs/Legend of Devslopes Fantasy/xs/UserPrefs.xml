@@ -1,33 +1,26 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/PlayerController.cs">
+﻿<Properties StartupConfiguration="{D63EDFFE-B426-09CA-3687-0E0B3839E9A2}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/EnemyAttack.cs">
     <Files>
-      <File FileName="Assets/scripts/CameraFollow.cs" Line="10" Column="27" IsPinned="True" />
-      <File FileName="Assets/scripts/PlayerController.cs" Line="20" Column="21" />
-      <File FileName="Assets/scripts/EnemyMove.cs" />
-      <File FileName="Assets/scripts/GameManager.cs" />
-      <File FileName="Assets/scripts/EnemyAttack.cs" />
-      <File FileName="Assets/scripts/PlayerHealth.cs" />
-      <File FileName="Assets/scripts/EnemyHealth.cs" />
+      <File FileName="Assets/scripts/CameraFollow.cs" Line="13" Column="21" IsPinned="True" />
+      <File FileName="Assets/scripts/PlayerController.cs" Line="10" Column="20" />
+      <File FileName="Assets/scripts/EnemyMove.cs" Line="8" Column="37" />
+      <File FileName="Assets/scripts/GameManager.cs" Line="133" Column="41" />
+      <File FileName="Assets/scripts/EnemyHealth.cs" Line="86" Column="31" />
+      <File FileName="Assets/scripts/PlayerHealth.cs" Line="13" Column="42" />
+      <File FileName="Assets/scripts/EnemyAttack.cs" Line="8" Column="29" />
+      <File FileName="Assets/scripts/RangerAttack.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Legend of Devslopes Fantasy" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="scripts" expanded="True">
-                  <Node name="PlayerController.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="Legend of Devslopes Fantasy" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="895a4fca-dd94-40a2-87ab-06a00cae5e06" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="192683ff-22e6-4c90-9b2a-d8d2f05b2cc5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

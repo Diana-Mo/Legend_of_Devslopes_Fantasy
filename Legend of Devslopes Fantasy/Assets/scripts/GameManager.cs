@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
 
                 yield return new WaitForSeconds(3f);
                 currentLevel++;
-                levelText.text = "Level" + currentLevel;
+                levelText.text = "Level " + currentLevel;
             }
         }
 
