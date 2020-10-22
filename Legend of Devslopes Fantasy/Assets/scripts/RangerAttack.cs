@@ -10,16 +10,19 @@ public class RangerAttack : MonoBehaviour
     private float range = 3f;
     [SerializeField]
     private float timeBetweenAttacks = 1f;
+    [SerializeField]
+    Transform fireLocation;
 
     private Animator anim;
     private GameObject player;
     private bool playerInRange;
-    
     private EnemyHealth enemyHealth;
+    private GameObject arrow;
 
     // Start is called before the first frame update
     void Start()
     {
+        arrow = GameManager.Instance.Arrow;
         enemyHealth = GetComponent<EnemyHealth>();
         player = GameManager.Instance.Player;
         anim = GetComponent<Animator>();
@@ -29,7 +32,7 @@ public class RangerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) < range)
+        if (Vector3.Distance(transform.position, player.transform.position) < range && enemyHealth.IsALive)
         {
             playerInRange = true;
             anim.SetBool("PlayerInRange", true);
@@ -68,5 +71,19 @@ public class RangerAttack : MonoBehaviour
         //performing the rotation, passing in the enemy's current rotation, where we want him to look and how fast it will rotate
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
     }
+
+    public void FireArrow()
+    {
+        //create arrow
+        //set position to a specific location
+        //set rotation
+        //set velocity
+
+        GameObject newArrow = Instantiate(arrow);
+        newArrow.transform.position = fireLocation.position;
+        newArrow.transform.rotation = transform.rotation;
+        newArrow.GetComponent<Rigidbody>().velocity = transform.forward * 25f;
+    }
+
 }
 

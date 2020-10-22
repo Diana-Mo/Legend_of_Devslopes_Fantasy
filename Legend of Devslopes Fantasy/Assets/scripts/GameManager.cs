@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     GameObject ranger;
     [SerializeField]
     GameObject soldier;
+    [SerializeField]
+    GameObject arrow;
     [SerializeField] Text levelText;
 
     private bool gameOver = false;
@@ -51,6 +53,14 @@ public class GameManager : MonoBehaviour
         get
         {
             return player;
+        }
+    }
+
+    public GameObject Arrow
+    {
+        get
+        {
+            return arrow;
         }
     }
 
