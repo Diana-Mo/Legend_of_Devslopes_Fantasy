@@ -69,6 +69,7 @@
     <Compile Include="Assets\scripts\EnemyHealth.cs" />
     <Compile Include="Assets\scripts\EnemyMove.cs" />
     <Compile Include="Assets\scripts\GameManager.cs" />
+    <Compile Include="Assets\scripts\HealthPowerUp.cs" />
     <Compile Include="Assets\scripts\PlayerController.cs" />
     <Compile Include="Assets\scripts\PlayerHealth.cs" />
     <Compile Include="Assets\scripts\RangerAttack.cs" />

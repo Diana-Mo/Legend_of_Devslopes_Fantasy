@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{D63EDFFE-B426-09CA-3687-0E0B3839E9A2}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/HealthPowerUp.cs">
     <Files>
       <File FileName="Assets/scripts/GameManager.cs" Line="34" Column="6" />
       <File FileName="Assets/scripts/EnemyHealth.cs" />
       <File FileName="Assets/scripts/PlayerHealth.cs" />
       <File FileName="Assets/scripts/EnemyAttack.cs" />
-      <File FileName="Assets/scripts/RangerAttack.cs" />
+      <File FileName="Assets/scripts/RangerAttack.cs" Line="36" Column="10" />
+      <File FileName="Assets/scripts/HealthPowerUp.cs" Line="17" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
