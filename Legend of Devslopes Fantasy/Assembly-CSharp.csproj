@@ -628,6 +628,24 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/diana/github/Legend_of_Devslopes_Fantasy/Legend of Devslopes Fantasy/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProGrids">
+      <HintPath>/Users/diana/github/Legend_of_Devslopes_Fantasy/Legend of Devslopes Fantasy/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>/Users/diana/github/Legend_of_Devslopes_Fantasy/Legend of Devslopes Fantasy/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>/Users/diana/github/Legend_of_Devslopes_Fantasy/Legend of Devslopes Fantasy/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>/Users/diana/github/Legend_of_Devslopes_Fantasy/Legend of Devslopes Fantasy/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>/Users/diana/github/Legend_of_Devslopes_Fantasy/Legend of Devslopes Fantasy/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>/Users/diana/github/Legend_of_Devslopes_Fantasy/Legend of Devslopes Fantasy/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
