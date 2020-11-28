@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(ParticleSystem))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
@@ -16,10 +17,14 @@ public class PlayerController : MonoBehaviour
     private Vector3 currentLookTarget = Vector3.zero; // don't know where to be looking on startup
     private Animator anim;
     private BoxCollider[] swordColliders;
+    private GameObject fireTrail;
+    private ParticleSystem fireTrailParticles;
 
     // Start is called before the first frame update
     void Start()
     {
+        fireTrail = GameObject.FindWithTag("Fire");
+        fireTrail.SetActive(false);
         characterController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         swordColliders = GetComponentsInChildren<BoxCollider>();
@@ -102,5 +107,25 @@ public class PlayerController : MonoBehaviour
         {
             weapon.enabled = false;
         }
+    }
+
+    public void SpeedPowerUp()
+    {
+        StartCoroutine(fireTrailRoutine());
+
+    }
+
+    IEnumerator fireTrailRoutine()
+    {
+        fireTrail.SetActive(true);
+        moveSpeed = 10f;
+        yield return new WaitForSeconds(10f);
+        moveSpeed = 6f;
+        fireTrailParticles = fireTrail.GetComponent<ParticleSystem>();
+        var em = fireTrailParticles.emission;
+        em.enabled = false;
+        yield return new WaitForSeconds(3f);
+        em.enabled = true;
+        fireTrail.SetActive(false);
     }
 }

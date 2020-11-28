@@ -17,7 +17,7 @@ public class SpeedPowerUp : MonoBehaviour
         GameManager.Instance.RegisterPowerUp();
     }
 
-    void OnTriggerEvent(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == player)
         {
