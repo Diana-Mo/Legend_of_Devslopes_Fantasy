@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{D63EDFFE-B426-09CA-3687-0E0B3839E9A2}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/HealthPowerUp.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/PlayerController.cs">
     <Files>
       <File FileName="Assets/scripts/EnemyHealth.cs" Line="9" Column="22" />
       <File FileName="Assets/scripts/EnemyAttack.cs" />
       <File FileName="Assets/scripts/RangerAttack.cs" />
       <File FileName="Assets/scripts/GameManager.cs" />
       <File FileName="Assets/scripts/PlayerHealth.cs" />
-      <File FileName="Assets/scripts/HealthPowerUp.cs" Line="13" Column="6" />
+      <File FileName="Assets/scripts/HealthPowerUp.cs" />
+      <File FileName="Assets/SpeedPowerUp.cs" Line="14" Column="42" />
+      <File FileName="Assets/scripts/PlayerController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +16,7 @@
           <Node name="Legend of Devslopes Fantasy" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="scripts" expanded="True">
-                <Node name="HealthPowerUp.cs" selected="True" />
+                <Node name="PlayerController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -24,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="34c21667-1e33-44d8-8512-34d03e99d7f0" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6f2a3841-765b-42d5-948c-ac468655e284" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
