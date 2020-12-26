@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Text levelText;
     [SerializeField]
+    Text endGameText;
+
+    [SerializeField]
     int maxPowerUps = 4;
 
     private bool gameOver = false;
@@ -96,7 +99,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); 
     }
 
     // Start is called before the first frame update
