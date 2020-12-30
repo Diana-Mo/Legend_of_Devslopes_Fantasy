@@ -442,7 +442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e680364105644c1d85a01659f17b05c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!195 &1547377004028262305
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -491,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6ef61d7de3943f9b30521288c79334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 80
+  startingHealth: 50
   timeSinceLastHit: 0.5
   dissapearSpeed: 2
 --- !u!1 &1887527354500805519

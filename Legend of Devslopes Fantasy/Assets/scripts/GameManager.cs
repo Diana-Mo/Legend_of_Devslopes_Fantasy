@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-        DontDestroyOnLoad(gameObject); 
+        //DontDestroyOnLoad(gameObject); 
     }
 
     // Start is called before the first frame update
@@ -127,8 +127,10 @@ public class GameManager : MonoBehaviour
         if (currentHP > 0)
             gameOver = false;
         else
+        {
             gameOver = true;
-        StartCoroutine(endGame("Defeat!"));
+            StartCoroutine(endGame("Defeat..."));
+        }
     }
 
     //how many enemies when and where to spawn
@@ -215,6 +217,6 @@ public class GameManager : MonoBehaviour
         endGameText.text = outcome;
         endGameText.GetComponent<Text>().enabled = true;
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("GameMenu");
     }
 }
