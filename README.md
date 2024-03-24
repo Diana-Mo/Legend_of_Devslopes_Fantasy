@@ -1,2 +1,2 @@
 # Legend_of_Devslopes_Fantasy
-another learning project
+3D LoL Style Basic Game Study
